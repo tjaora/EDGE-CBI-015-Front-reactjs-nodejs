@@ -1,189 +1,299 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600;700&display=swap" />
-    <title>bd-architects</title>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="G3 Architects – a brand-new group of architects delivering modern, award-winning design solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!--
+    FIX 1: Encoded the space in the font-family name.
+    Original: family=Work Sans   → Correct: family=Work+Sans
+  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <title>BD Architects</title>
 </head>
-
 <body>
 
-    <div class="rectangle-parent">
-        <div class="frame-child">
-        </div>
-        <b class="brand-new-group-container">
-      			<p class="brand-new">Brand New </p>
-      			<p class="brand-new">Group of Architects </p>
-    		</b>
-        <b class="g3-architects">G3 Architects</b>
-        <div class="there-are-many">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even</div>
-        <div class="home-about-contact">
-            <nav>
-                <div class="class"><a href="#">Home</a></div>
-                <div class="class"><a href="#">About</a></div>
-                <div class="class"><a href="#">Contact Us</a></div>
-                <div class="class"><a href="#">Login</a></div>
-            </nav>
-        </div>
-        <div class="rectangle-group">
-            <div class="group-child">
-            </div>
-            <div class="explore-more">Explore More</div>
-        </div>
-        <b class="some-facts">Some Facts</b>
-        <div class="there-are-many1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</div>
-        <div class="project-finished-parent">
-            <div class="project-finished">Project Finished</div>
-            <div class="div">1458</div>
-        </div>
-        <div class="clients-worked-parent">
-            <div class="project-finished">Clients Worked</div>
-            <div class="div1">590</div>
-        </div>
-        <div class="email-send-parent">
-            <div class="email-send">Email Send</div>
-            <div class="div2">22578</div>
-        </div>
-        <div class="frame-item">
-        </div>
-        <div class="frame-inner">
-        </div>
-        <div class="rectangle-div">
-        </div>
-        <div class="frame-child1">
-        </div>
+  <!--
+    FIX 2: Replaced the single giant <div class="rectangle-parent"> wrapper that held
+    every element absolutely positioned at hardcoded pixel offsets (Figma export artefact).
+    Replaced with semantic landmark elements: <header>, <main>, <section>, <footer>.
 
+    FIX 3: Removed fixed height (height: 4760px) on the wrapper div.
 
-        <div class="quick-list-of-our-features-parent">
-            <div class="quick-list-of-container">
-                <span class="quick-list">Quick list</span>
-                <b class="of-our-features">
-          					<span> of Our </span>
-          					<span class="features">Features</span>
-        				</b>
-            </div>
-            <div class="there-are-many3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even</div>
-            <div class="group-div">
-                <div class="group-child">
-                </div>
-                <div class="explore-more">Explore More</div>
-            </div>
-        </div>
-        <img class="team1-icon" alt="" src="../Week-3 Assignment/images/team1.png">
+    FIX 4: All image paths changed from "../Week-3 Assignment/images/…"
+    (path with spaces, will break in many environments) to "images/…"
+    Place the images folder next to index.html and style.css.
+  -->
 
-        <img class="team3-icon" alt="" src="../Week-3 Assignment/images/team3.png">
+  <!-- ══════════════════════════════
+       HEADER
+  ══════════════════════════════ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!--
+          FIX 5: "G3 Architects" was a <b> tag.
+          It is the site's primary identifier → <h1> is correct here.
+        -->
+        <h1 class="logo">G3 Architects</h1>
 
-        <img class="team2-icon" alt="" src="../Week-3 Assignment/images/team2.png">
-
-        <img class="team4-icon" alt="" src="../Week-3 Assignment/images/team4.png">
-
-        <div class="group-container">
-            <div class="group-parent1">
-                <div class="features-you-will-love-enjoy-parent">
-                    <b class="features-you-will">Features you will love & enjoy</b>
-                    <div class="there-are-many4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even</div>
-                    <div class="group-parent2">
-                        <div class="rectangle-parent1">
-                            <div class="group-child2">
-                            </div>
-                            <div class="dexktop-mobile-version-parent">
-                                <div class="dexktop-mobile">Dexktop & Mobile Version</div>
-                                <div class="there-are-many5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised...........</div>
-                            </div>
-                        </div>
-                        <div class="rectangle-parent2">
-                            <div class="group-child2">
-                            </div>
-                            <div class="dexktop-mobile-version-parent">
-                                <div class="dexktop-mobile">Drag & Drop Builder</div>
-                                <div class="there-are-many5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised...........</div>
-                            </div>
-                        </div>
-                        <div class="rectangle-parent3">
-                            <div class="group-child2">
-                            </div>
-                            <div class="dexktop-mobile-version-parent">
-                                <div class="dexktop-mobile">Awesome Modern Design</div>
-                                <div class="there-are-many5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised...........</div>
-                            </div>
-                        </div>
-                        <div class="rectangle-parent4">
-                            <div class="group-child2">
-                            </div>
-                            <div class="dexktop-mobile-version-parent">
-                                <div class="dexktop-mobile">Super Easy to Edit</div>
-                                <div class="there-are-many5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised...........</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="architect-parent">
-                    <img class="architect-icon" alt="" src="../Week-3 Assignment/images/architect.png">
-
-                    <div class="rectangle-parent5">
-                        <div class="group-child6">
-                        </div>
-                        <div class="year-experience">
-                            <p class="brand-new">
-                                <b class="year1">10+Year</b>
-                            </p>
-                            <p class="experience">Experience</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="group-child7">
-            </div>
-        </div>
-        <!--footer-->
-        <div class="our-sponspors-parent">
-            <b class="our-sponspors">Our Sponspors</b>
-            <div class="there-are-many2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</div>
-        </div>
-        <img class="group-icon" alt="" src="../Week-3 Assignment/images/Group 28.png">
-
-        <div class="group-parent">
-            <div class="awards-winnings-parent">
-                <div class="project-finished">Awards Winnings</div>
-                <div class="div3">54</div>
-            </div>
-            <img class="group-item" alt="" src="../Week-3 Assignment/images/001-medal.png">
-
-        </div>
-        <img class="frame-child2" alt="" src="../Week-3 Assignment/images/Group 29.png">
-
-        <img class="frame-child3" alt="" src="../Week-3 Assignment/images/Group 30.png">
-
-
-        <img class="banner-icon" alt="" src="../Week-3 Assignment/images/banner.png">
-        <img class="spotify-logo-icon" alt="" src="../Week-3 Assignment/images/spotify Logo.png">
-
-        <img class="amazon-logo-icon" alt="" src="../Week-3 Assignment/images/logo-amazon 1.png">
-
-        <img class="google-logo-icon" alt="" src="../Week-3 Assignment/images/google Logo.png">
-
-        <img class="telerama-logo-icon" alt="" src="../Week-3 Assignment/images/Telerama Logo.png">
-
-        <img class="figma-logo-icon" alt="" src="../Week-3 Assignment/images/figma Logo.png">
-
-        <div class="group-wrapper">
-            <div class="rectangle-container">
-                <div class="group-inner">
-                </div>
-                <div class="all-rights-reserved">All rights reserved copyright@2023 startup landing page design</div>
-            </div>
-        </div>
+        <!--
+          FIX 6: Nav links were wrapped in generic <div class="class"> elements.
+          Simplified to direct <a> descendants of <nav>; aria-label added for screen readers.
+        -->
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#" class="nav-link">Home</a>
+          <a href="#" class="nav-link">About</a>
+          <a href="#" class="nav-link">Contact Us</a>
+          <a href="#" class="nav-link">Login</a>
+        </nav>
+      </div>
     </div>
+  </header>
 
+  <main>
 
+    <!-- ══════════════════════════════
+         HERO
+    ══════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+      <div class="container">
+        <div class="hero-content">
+          <!--
+            FIX 7: Hero headline was a <b> with two <p class="brand-new"> inside.
+            Correct element: <h2> (page heading, <h1> is already the logo).
+          -->
+          <h2 class="hero-title">Brand New<br>Group of Architects</h2>
+          <p class="hero-body">
+            There are many variations of passages of Lorem Ipsum available, but the majority
+            have suffered alteration in some form, by injected humour, or randomised words
+            which don't look even
+          </p>
+          <a href="#" class="btn">Explore More</a>
+        </div>
+      </div>
+    </section>
 
+    <!-- ══════════════════════════════
+         BANNER IMAGE
+    ══════════════════════════════ -->
+    <section class="banner-section" aria-label="Project banner">
+      <div class="container">
+        <!--
+          FIX 8: alt="" → descriptive alt text for meaningful images.
+        -->
+        <img src="images/banner.png" alt="Modern architectural project showcase" class="banner-img">
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         GALLERY + FEATURES
+    ══════════════════════════════ -->
+    <section class="gallery-section" aria-label="Team gallery and features">
+      <div class="container">
+        <div class="gallery-features-grid">
+
+          <!-- 2×2 team photo grid -->
+          <div class="team-grid">
+            <img src="images/team1.png" alt="Architect team member" class="team-photo">
+            <img src="images/team2.png" alt="Architect team member" class="team-photo">
+            <img src="images/team3.png" alt="Architect team member" class="team-photo">
+            <img src="images/team4.png" alt="Architect team member" class="team-photo">
+          </div>
+
+          <!-- Feature text panel -->
+          <div class="feature-panel">
+            <!--
+              FIX 9: Heading was a nested mix of <span> and <b> inside a plain <div>.
+              Using <h2> with inner <span> elements for the two-tone style.
+            -->
+            <h2 class="section-heading">
+              <span class="fw-medium">Quick list</span>
+              <strong> of Our <span class="accent">Features</span></strong>
+            </h2>
+            <p class="section-body">
+              There are many variations of passages of Lorem Ipsum available, but the majority
+              have suffered alteration in some form, by injected humour, or randomised words
+              which don't look even
+            </p>
+            <a href="#" class="btn">Explore More</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         FEATURES YOU WILL LOVE
+    ══════════════════════════════ -->
+    <section class="love-section" aria-label="Features you will love">
+      <div class="container">
+        <div class="love-grid">
+
+          <!-- Left column: heading + feature cards -->
+          <div class="love-left">
+            <!-- FIX 10: The orange accent bar was an empty <div class="group-child7">;
+                 now a CSS-only ::before pseudo-element (see style.css). -->
+            <h2 class="section-heading">Features you will love &amp; enjoy</h2>
+            <p class="section-body">
+              There are many variations of passages of Lorem Ipsum available, but the majority
+              have suffered alteration in some form, by injected humour, or randomised words
+              which don't look even
+            </p>
+
+            <div class="feature-cards">
+              <!--
+                FIX 11: Feature card headings were plain <div>s.
+                Using <article> + <h3> for proper document outline.
+
+                FIX 12: "Dexktop" → "Desktop" (typo corrected).
+              -->
+              <article class="feature-card">
+                <h3 class="feature-card-title">Desktop &amp; Mobile Version</h3>
+                <p class="feature-card-body">
+                  There are many variations of passages of Lorem Ipsum available, but the majority
+                  have suffered alteration in some form, by injected humour, or randomised...
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3 class="feature-card-title">Drag &amp; Drop Builder</h3>
+                <p class="feature-card-body">
+                  There are many variations of passages of Lorem Ipsum available, but the majority
+                  have suffered alteration in some form, by injected humour, or randomised...
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3 class="feature-card-title">Awesome Modern Design</h3>
+                <p class="feature-card-body">
+                  There are many variations of passages of Lorem Ipsum available, but the majority
+                  have suffered alteration in some form, by injected humour, or randomised...
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3 class="feature-card-title">Super Easy to Edit</h3>
+                <p class="feature-card-body">
+                  There are many variations of passages of Lorem Ipsum available, but the majority
+                  have suffered alteration in some form, by injected humour, or randomised...
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Right column: architect photo + experience badge -->
+          <div class="love-right">
+            <div class="architect-wrapper">
+              <img src="images/architect.png" alt="Professional architect reviewing blueprints" class="architect-img">
+              <div class="experience-badge">
+                <span class="exp-years">10+ Year</span>
+                <span class="exp-label">Experience</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         SOME FACTS
+    ══════════════════════════════ -->
+    <section class="facts-section" aria-label="Company facts">
+      <div class="container">
+        <div class="facts-header">
+          <h2 class="section-heading">Some Facts</h2>
+          <p class="section-body">
+            There are many variations of passages of Lorem Ipsum available, but the majority
+            have suffered alteration.
+          </p>
+        </div>
+
+        <!--
+          FIX 13: Stats were scattered across individually-positioned divs
+          (project-finished-parent, clients-worked-parent, email-send-parent, group-parent),
+          each with duplicated absolute-positioned children.
+          Consolidated into a single 4-column grid of semantic <figure> elements.
+
+          FIX 14: The rotated bordered boxes (frame-item, frame-inner, rectangle-div,
+          frame-child1) used transform: rotate(90deg) on a square — visually identical
+          to an unrotated square. Replaced with a simple border on each card.
+        -->
+        <div class="facts-grid">
+          <figure class="fact-card">
+            <img src="images/001-medal.png" alt="" class="fact-icon" aria-hidden="true">
+            <figcaption>
+              <span class="fact-number">54</span>
+              <span class="fact-label">Awards Winnings</span>
+            </figcaption>
+          </figure>
+          <figure class="fact-card">
+            <img src="images/Group 28.png" alt="" class="fact-icon" aria-hidden="true">
+            <figcaption>
+              <span class="fact-number">1458</span>
+              <span class="fact-label">Project Finished</span>
+            </figcaption>
+          </figure>
+          <figure class="fact-card">
+            <img src="images/Group 29.png" alt="" class="fact-icon" aria-hidden="true">
+            <figcaption>
+              <span class="fact-number">590</span>
+              <span class="fact-label">Clients Worked</span>
+            </figcaption>
+          </figure>
+          <figure class="fact-card">
+            <img src="images/Group 30.png" alt="" class="fact-icon" aria-hidden="true">
+            <figcaption>
+              <span class="fact-number">22578</span>
+              <span class="fact-label">Email Send</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         SPONSORS
+    ══════════════════════════════ -->
+    <!--
+      FIX 15: "Sponspors" → "Sponsors" (typo corrected in both section text and aria-label).
+    -->
+    <section class="sponsors-section" aria-label="Our Sponsors">
+      <div class="container">
+        <div class="sponsors-header">
+          <h2 class="section-heading">Our Sponsors</h2>
+          <p class="section-body">
+            There are many variations of passages of Lorem Ipsum available, but the majority
+            have suffered alteration.
+          </p>
+        </div>
+        <div class="sponsors-row">
+          <img src="images/spotify Logo.png"    alt="Spotify"  class="sponsor-logo">
+          <img src="images/logo-amazon 1.png"   alt="Amazon"   class="sponsor-logo">
+          <img src="images/google Logo.png"     alt="Google"   class="sponsor-logo">
+          <img src="images/Telerama Logo.png"   alt="Telerama" class="sponsor-logo">
+          <img src="images/figma Logo.png"      alt="Figma"    class="sponsor-logo">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <!--
+    FIX 16: Footer was a deeply nested chain of absolutely-positioned divs
+    (group-wrapper → rectangle-container → group-inner + all-rights-reserved).
+    Replaced with a plain <footer> element.
+
+    FIX 17: "copyright@2023" → "copyright©2023" (correct HTML entity &copy;).
+  -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">All rights reserved copyright &copy; 2023 startup landing page design</p>
+    </div>
+  </footer>
 
 </body>
-
 </html>
