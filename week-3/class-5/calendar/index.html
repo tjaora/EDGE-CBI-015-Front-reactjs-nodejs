@@ -1,62 +1,92 @@
-    html {
-        scroll-behavior: smooth;
-        background-color: wheat;
-    }
-    .body {
-        background-color: rgb(125, 73, 106);
-        margin: 1rem 0 0 0;
-    }
-    
-    .container-2 {
-        margin-top: 1%;
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .container-2>img {
-        margin-top: 1%;
-        height: 12rem;
-        width: 25rem;
-    }
-    
-    .tittle {
-        display: flex;
-        flex-direction: row;
-        gap: 0rem 1rem;
-    }
-    
-    .day {
-        
-        font-size: 1rem;
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        column-gap: 1.7rem;
-        padding: 0 0 1rem 0;
-        font-weight: bolder;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    
-    .cal {
-        display: grid;
-        grid-template-columns: repeat(7, 3fr);
-        column-gap: 2px;
-        row-gap: 2px;
-        padding: 1rem 0 1rem 0;
-    }
-    
-    .date {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 1.25rem;
-        font-size: 1rem;
-        text-align: center;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    .today{
-    background:#540262;
-    color:white;
-    font-weight:bold;
+<body>
+    <div class="container-2">
+
+       
+            <img src="../calendar/images/pngtree-misty-mountain-flying-bird-beautiful-nature-background-image_15713331.jpg" alt="mountain picture">
+            <div class="tittle">
+             <h2 id="month"></h2>
+             <h5 id="year"></h5>
+            </div>
+            <div class="day">
+
+                <p>Sun</p>
+                <p>Mon</p>
+                <p>Tue</p>
+                <p>Wed</p>
+                <p>Thu</p>
+                <p>Fri</p>
+                <p>Sat</p>
+
+            </div>
+
+            <div class="cal" id="calendar"></div>
+
+
+        
+
+    </div>
+<script>
+const monthEl = document.getElementById("month");
+const yearEl = document.getElementById("year");
+const calendar = document.getElementById("calendar");
+
+const today = new Date();
+
+const month = today.getMonth();
+const year = today.getFullYear();
+
+const months = [
+    "January","February","March","April","May","June",
+    "July","August","September","October","November","December"
+];
+
+// Display month and year
+monthEl.textContent = months[month];
+yearEl.textContent = year;
+
+// First day of the month
+const firstDay = new Date(year, month, 1).getDay();
+
+// Number of days in the month
+const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+// Empty boxes before day 1
+for(let i = 0; i < firstDay; i++){
+    const empty = document.createElement("div");
+    empty.classList.add("date");
+    empty.style.visibility = "hidden";
+    calendar.appendChild(empty);
 }
+
+// Create the dates
+for(let day = 1; day <= daysInMonth; day++){
+
+    const div = document.createElement("div");
+    div.classList.add("date");
+    div.textContent = day;
+
+    // Highlight today's date
+    if(
+        day === today.getDate() &&
+        month === today.getMonth() &&
+        year === today.getFullYear()
+    ){
+        div.classList.add("today");
+    }
+
+    calendar.appendChild(div);
+}
+</script>
+</body>
+
+</html>
